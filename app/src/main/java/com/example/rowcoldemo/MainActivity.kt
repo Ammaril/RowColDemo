@@ -12,6 +12,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.layout.LastBaseline
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
@@ -35,10 +36,10 @@ class MainActivity : ComponentActivity() {
 
 @Composable
 fun MainScreen(modifier: Modifier = Modifier) {
-    Row(modifier = modifier) {
+    Row {
         Text(
-            text = "Large Text",
-            modifier = Modifier.alignByBaseline(),
+            text = "Large Text\n\nMore Text",
+            modifier = Modifier.alignBy(LastBaseline),
             fontSize = 40.sp,
             fontWeight = FontWeight.Bold
         )

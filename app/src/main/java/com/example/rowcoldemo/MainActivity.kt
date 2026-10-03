@@ -20,10 +20,7 @@ class MainActivity : ComponentActivity() {
         setContent {
             RowColDemoTheme {
                 Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
-                    Greeting(
-                        name = "Android",
-                        modifier = Modifier.padding(innerPadding)
-                    )
+                    MainScreen(modifier = Modifier.padding(innerPadding))
                 }
             }
         }
@@ -33,7 +30,7 @@ class MainActivity : ComponentActivity() {
 @Composable
 fun MainScreen(modifier: Modifier = Modifier) {
     Text(
-        text = "Hello $name!",
+        text = "Hello Android!",
         modifier = modifier
     )
 }
@@ -42,6 +39,6 @@ fun MainScreen(modifier: Modifier = Modifier) {
 @Composable
 fun GreetingPreview() {
     RowColDemoTheme {
-        Greeting("Android")
+        MainScreen()
     }
 }
